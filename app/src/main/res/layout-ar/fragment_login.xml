@@ -10,7 +10,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@android:color/white"
-            android:layoutDirection="ltr"
             android:orientation="vertical">
 
             <LinearLayout
@@ -29,11 +28,10 @@
                     android:src="@drawable/logo180" />
 
                 <LinearLayout
-                    android:textDirection="rtl"
-                    android:layoutDirection="rtl"
-                    style="@style/requests_form_linear"
                     android:layout_width="match_parent"
+                    android:background="@drawable/linear_background"
                     android:layout_height="60dp"
+                    android:gravity="center"
                     android:layout_marginStart="40dp"
                     android:layout_marginTop="70dp"
                     android:layout_marginEnd="40dp"
@@ -41,33 +39,34 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="left"
-                        android:layout_margin="10dp"
+                        android:layout_width="19dp"
+                        android:layout_height="15dp"
                         android:scaleType="fitXY"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="6dp"
                         android:src="@drawable/email_icon" />
 
-                    <AutoCompleteTextView
+                    <EditText
                         android:id="@+id/email"
-                        style="@style/requests_form_edit_text"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:autofillHints="@string/email"
+                        android:layout_margin="4dp"
+                        android:paddingBottom="2dp"
                         android:hint="@string/email"
+                        android:gravity="right|center"
+                        android:background="@color/white"
                         android:imeOptions="actionNext"
                         android:inputType="textEmailAddress"
-                        android:maxLines="1"
+                        android:singleLine="true"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black_trans_dark"
                         android:textSize="13sp" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:textDirection="rtl"
-                    android:layoutDirection="rtl"
-                    style="@style/requests_form_linear"
+                    android:gravity="center"
+                    android:background="@drawable/linear_background"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginStart="40dp"
@@ -79,23 +78,23 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:layout_gravity="left"
-                        android:layout_margin="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="6dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/lock_icon" />
 
                     <AutoCompleteTextView
-                        android:gravity="right"
                         android:id="@+id/password"
-                        style="@style/requests_form_edit_text"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
+                        android:layout_margin="4dp"
                         android:autofillHints="@string/password"
                         android:hint="@string/password"
+                        android:gravity="center|right"
+                        android:background="@color/white"
                         android:imeOptions="actionNext"
                         android:inputType="textPassword"
-                        android:maxLines="1"
+                        android:singleLine="true"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black_trans_dark"
                         android:textSize="13sp" />

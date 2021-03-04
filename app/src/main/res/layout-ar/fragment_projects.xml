@@ -4,32 +4,31 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
         android:background="@color/white"
         android:orientation="vertical">
-        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/projects_cell"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layoutDirection="ltr"
             android:orientation="vertical">
 
             <LinearLayout
-                android:textDirection="rtl"
-                android:layoutDirection="rtl"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/projects"

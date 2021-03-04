@@ -50,6 +50,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         helper = new PreferenceHelper(getActivity());
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false);
+        ((MainActivity) getActivity()).hideImageIcon();
         ((MainActivity) getActivity()).findViewById(R.id.btnBack).setVisibility(View.VISIBLE);
         ((MainActivity) getActivity()).findViewById(R.id.btnBack).setOnClickListener(new View.OnClickListener() {
 

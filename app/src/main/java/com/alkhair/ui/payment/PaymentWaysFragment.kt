@@ -159,7 +159,6 @@ class PaymentWaysFragment : Fragment() {
         }
         helper.getlanguage()
         if(helper.getLang() == "ar") {
-         //   (activity as MainActivity).setTittle("alaa")
 
         }
         view!!.isFocusableInTouchMode = true

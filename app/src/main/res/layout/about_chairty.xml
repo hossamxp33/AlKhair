@@ -1,61 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
-
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp">
+                android:orientation="vertical">
 
-                <ProgressBar
-                    android:id="@+id/progressBar"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerInParent="true"
-                    android:visibility="visible" />
-                <TextView
-                    android:id="@+id/about"
+
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="10dp"
-                    android:fontFamily="@font/d"
-                    android:textColor="@color/green_700"
-                    android:text="@string/details"
+                    android:layout_margin="10dp">
 
-                    android:textSize="@dimen/medium_text_size"/>
-                <TextView
-                    android:id="@+id/details"
+
+                    <TextView
+                        android:id="@+id/about"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/d"
+                        android:text="@string/details"
+                        android:textColor="@color/green_700"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/about"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/medium_text_size">
+
+                    </TextView>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="10dp"
-                    android:textColor="@color/gray"
-                    android:layout_below="@+id/about"
-                    android:text="@string/details"
-                    android:textSize="@dimen/medium_text_size">
-
-                </TextView>
+                    android:layout_margin="10dp">
 
 
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/goal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/d"
+                        android:text="@string/chirtyGoal"
+                        android:textColor="@color/green_700"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/goalDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/goal"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/medium_text_size">
+
+                    </TextView>
 
 
+                </RelativeLayout>
 
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contactinfo"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="20dp"
+                android:textSize="22dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="19dp"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@drawable/phone_call" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/phoneText"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="19dp"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@drawable/pin" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/locationText"
+                    android:layout_marginBottom="4dp"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="19dp"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@drawable/email_icon" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/emailText"
+                    android:layout_marginBottom="4dp"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/projectlocation"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="20dp"
+                android:textSize="22dp"/>
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                tools:context=".MapsActivity" />
 
         </LinearLayout>
-
-
-    </LinearLayout>
+    </ScrollView>
 </layout>
